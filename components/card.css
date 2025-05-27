@@ -4,18 +4,27 @@
   box-sizing: border-box;
 }
 .question-card {
+  font-size: larger;
   list-style: none;
   padding-left: 0;
   margin: 0;
   display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
   justify-content: space-around;
-  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .question-card {
+    flex-wrap: wrap;
+  }
 }
 .first-card {
+  position: relative;
   background-color: var(--color-cerice);
   border: 2px solid var(--color-blush);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 5rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 6px var(--color-blush);
   flex-grow: 1;
@@ -26,6 +35,7 @@
 }
 
 .second-card {
+  position: relative;
   background-color: var(--color-cerice);
   border: 2px solid var(--color-blush);
   border-radius: 8px;
@@ -39,6 +49,7 @@
   text-align: center;
 }
 .third-card {
+  position: relative;
   background-color: var(--color-cerice);
   border: 2px solid var(--color-blush);
   border-radius: 8px;
@@ -50,6 +61,11 @@
   margin: 0 10px;
   padding: 20px;
   text-align: center;
+}
+.bookmark-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 h2 {
   display: flex;
