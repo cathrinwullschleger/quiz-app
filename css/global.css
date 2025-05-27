@@ -1,0 +1,9 @@
+:root {
+  --color-cerice: #e23260;
+  --color-citron: #849428;
+  --color-charleston: #1e3309;
+  --color-blush: #f2678e;
+}
+body {
+  color: var(--color-charleston);
+}
