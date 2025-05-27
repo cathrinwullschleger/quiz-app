@@ -1,4 +1,6 @@
 .header {
+  padding-right: 60px;
+  position: relative;
   top: 0;
   background-color: var(--color-cerice);
   color: var(--color-charleston);
@@ -12,4 +14,21 @@
   position: fixed;
   font-size: x-large;
   z-index: 1;
+}
+.quiz-icon {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  border: 2px solid var(--color-blush);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 450px) {
+  .quiz-icon {
+    right: 10px;
+    top: 5px;
+    padding: 5px;
+    display: none;
+  }
 }
