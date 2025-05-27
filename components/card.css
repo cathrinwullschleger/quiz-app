@@ -16,6 +16,7 @@
   margin-bottom: 1rem;
   box-shadow: 0 2px 6px var(--color-blush);
 }
+
 .second-card {
   background-color: var(--color-cerice);
   border: 2px solid var(--color-blush);
@@ -32,18 +33,7 @@
   margin-bottom: 1rem;
   box-shadow: 0 2px 6px var(--color-blush);
 }
-.flexbox-tag {
-  background-color: var(--color-citron);
-  border: 2px;
-  border-radius: 5px;
-}
-.html-tag {
-  background-color: var(--color-citron);
-  border: 2px;
-  border-radius: 5px;
-}
-.css-tag {
-  background-color: var(--color-citron);
-  border: 2px;
-  border-radius: 5px;
+h2 {
+  display: flex;
+  justify-content: center;
 }

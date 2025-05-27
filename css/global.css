@@ -6,4 +6,9 @@
 }
 body {
   color: var(--color-charleston);
+  background-image: url(../assets/IMG_7163.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

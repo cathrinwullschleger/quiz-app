@@ -1,0 +1,30 @@
+.flexbox-tag {
+  background-color: var(--color-citron);
+  border: 5px solid var(--color-citron);
+  border-radius: 5px;
+  padding: 5px;
+}
+.flexbox-tag:hover {
+  background-color: var(--color-blush);
+  border: 5px solid var(--color-blush);
+}
+.html-tag {
+  background-color: var(--color-citron);
+  border: 5px solid var(--color-citron);
+  border-radius: 5px;
+  padding: 5px;
+}
+.html-tag:hover {
+  background-color: var(--color-blush);
+  border: 5px solid var(--color-blush);
+}
+.css-tag {
+  background-color: var(--color-citron);
+  border: 5px solid var(--color-citron);
+  border-radius: 5px;
+  padding: 5px;
+}
+.css-tag:hover {
+  background-color: var(--color-blush);
+  border: 5px solid var(--color-blush);
+}
