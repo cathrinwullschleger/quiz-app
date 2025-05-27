@@ -3,6 +3,8 @@
   border: 5px solid var(--color-citron);
   border-radius: 5px;
   padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
 }
 .flexbox-tag:hover {
   background-color: var(--color-blush);
@@ -13,6 +15,8 @@
   border: 5px solid var(--color-citron);
   border-radius: 5px;
   padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
 }
 .html-tag:hover {
   background-color: var(--color-blush);
@@ -23,6 +27,8 @@
   border: 5px solid var(--color-citron);
   border-radius: 5px;
   padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
 }
 .css-tag:hover {
   background-color: var(--color-blush);
