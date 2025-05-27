@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.question-card {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.first-card {
+  background-color: var(--color-cerice);
+  border: 2px solid var(--color-blush);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px var(--color-blush);
+}
+
+.second-card {
+  background-color: var(--color-cerice);
+  border: 2px solid var(--color-blush);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px var(--color-blush);
+}
+.third-card {
+  background-color: var(--color-cerice);
+  border: 2px solid var(--color-blush);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px var(--color-blush);
+}
+h2 {
+  display: flex;
+  justify-content: center;
+}
