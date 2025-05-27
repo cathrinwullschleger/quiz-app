@@ -1,6 +1,7 @@
 .header {
   top: 0;
   background-color: var(--color-cerice);
+  color: var(--color-charleston);
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;

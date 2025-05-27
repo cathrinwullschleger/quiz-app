@@ -1,12 +1,12 @@
 :root {
-  --color-cerice: #e23260;
+  --color-cerice: #e4dfdd;
   --color-citron: #849428;
   --color-charleston: #1e3309;
-  --color-blush: #fca9aa;
+  --color-blush: #99a8ae;
 }
 body {
   color: var(--color-charleston);
-  background-image: url(../assets/IMG_7163.JPG);
+  background-image: url(../assets/IMG_7169.JPG);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

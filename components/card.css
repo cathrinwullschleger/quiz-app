@@ -44,19 +44,15 @@ h2 {
   justify-content: center;
 }
 .tag {
-  background-color: var(--color-citron);
-  border: 5px solid var(--color-citron);
+  border: 2px solid var(--color-blush);
   border-radius: 5px;
   padding: 5px;
   gap: 2px;
   margin: 5px 0;
-  color: var(--color-cerice);
+  color: var(--color-blush);
   font-weight: bold;
 }
-.tag {
-  background-color: var(--color-blush);
-  border: 5px solid var(--color-blush);
-}
+
 .tags {
   display: flex;
   justify-content: flex-start;
