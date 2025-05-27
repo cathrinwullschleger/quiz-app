@@ -5,6 +5,8 @@
   padding: 5px;
   gap: 2px;
   margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
 }
 .flexbox-tag:hover {
   background-color: var(--color-blush);
@@ -17,6 +19,8 @@
   padding: 5px;
   gap: 2px;
   margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
 }
 .html-tag:hover {
   background-color: var(--color-blush);
@@ -29,6 +33,8 @@
   padding: 5px;
   gap: 2px;
   margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
 }
 .css-tag:hover {
   background-color: var(--color-blush);
