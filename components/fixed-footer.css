@@ -12,7 +12,11 @@
   display: flex;
   justify-content: space-evenly;
 }
-.home-icon {
-  width: 24px;
-  height: 24px;
+.footer-link img {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.footer-link.active img {
+  background-color: var(--color-blush);
 }
