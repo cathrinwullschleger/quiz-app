@@ -19,7 +19,7 @@
     flex-wrap: wrap;
   }
 }
-.first-card {
+.card {
   position: relative;
   background-color: var(--color-cerice);
   border: 2px solid var(--color-blush);
@@ -34,34 +34,6 @@
   text-align: center;
 }
 
-.second-card {
-  position: relative;
-  background-color: var(--color-cerice);
-  border: 2px solid var(--color-blush);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 6px var(--color-blush);
-  flex-grow: 1;
-  min-width: 150px;
-  margin: 0 10px;
-  padding: 20px;
-  text-align: center;
-}
-.third-card {
-  position: relative;
-  background-color: var(--color-cerice);
-  border: 2px solid var(--color-blush);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 6px var(--color-blush);
-  flex-grow: 1;
-  min-width: 150px;
-  margin: 0 10px;
-  padding: 20px;
-  text-align: center;
-}
 .bookmark-icon {
   position: absolute;
   top: 10px;
@@ -70,4 +42,24 @@
 h2 {
   display: flex;
   justify-content: center;
+}
+.tag {
+  background-color: var(--color-citron);
+  border: 5px solid var(--color-citron);
+  border-radius: 5px;
+  padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
+}
+.tag {
+  background-color: var(--color-blush);
+  border: 5px solid var(--color-blush);
+}
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  flex-wrap: wrap;
 }
