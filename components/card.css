@@ -7,6 +7,9 @@
   list-style: none;
   padding-left: 0;
   margin: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 .first-card {
   background-color: var(--color-cerice);
@@ -15,6 +18,11 @@
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 6px var(--color-blush);
+  flex-grow: 1;
+  min-width: 150px;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
 }
 
 .second-card {
@@ -24,6 +32,11 @@
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 6px var(--color-blush);
+  flex-grow: 1;
+  min-width: 150px;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
 }
 .third-card {
   background-color: var(--color-cerice);
@@ -32,6 +45,11 @@
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 6px var(--color-blush);
+  flex-grow: 1;
+  min-width: 150px;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
 }
 h2 {
   display: flex;

@@ -3,6 +3,10 @@
   border: 5px solid var(--color-citron);
   border-radius: 5px;
   padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
 }
 .flexbox-tag:hover {
   background-color: var(--color-blush);
@@ -13,6 +17,10 @@
   border: 5px solid var(--color-citron);
   border-radius: 5px;
   padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
 }
 .html-tag:hover {
   background-color: var(--color-blush);
@@ -23,6 +31,10 @@
   border: 5px solid var(--color-citron);
   border-radius: 5px;
   padding: 5px;
+  gap: 2px;
+  margin: 5px 0;
+  color: var(--color-cerice);
+  font-weight: bold;
 }
 .css-tag:hover {
   background-color: var(--color-blush);
