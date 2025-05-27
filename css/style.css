@@ -3,8 +3,10 @@
 @import "../components/header.css";
 @import "./global.css";
 @import "../components/button.css";
+@import "./bookmark.css";
 
 main {
-  margin-top: 70px;
+  margin-top: 100px;
+
   padding-top: 70px;
 }

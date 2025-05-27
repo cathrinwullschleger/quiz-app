@@ -1,0 +1,8 @@
+.bookmark {
+  position: relative;
+  background-color: var(--color-cerice);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}

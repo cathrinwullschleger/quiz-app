@@ -2,7 +2,7 @@
   --color-cerice: #e23260;
   --color-citron: #849428;
   --color-charleston: #1e3309;
-  --color-blush: #f2678e;
+  --color-blush: #fca9aa;
 }
 body {
   color: var(--color-charleston);
@@ -11,5 +11,5 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
