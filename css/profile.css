@@ -1,0 +1,88 @@
+.profile {
+  background-color: var(--color-cerice);
+  max-width: 50%;
+  margin: 0px auto;
+  border: 2px solid var(--color-blush);
+  box-shadow: 0 2px 6px var(--color-blush);
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .profile {
+    max-width: 100%;
+    margin: 10px 5px;
+  }
+}
+.settings {
+  background-color: var(--color-cerice);
+  max-width: 50%;
+  margin: 0px auto;
+  border: 2px solid var(--color-blush);
+  box-shadow: 0 2px 6px var(--color-blush);
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.bookmark-icon-counter {
+  background-color: var(--color-blush);
+  padding: 8px;
+  border-radius: 10px;
+  right: 10px;
+}
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  width: 40px;
+  height: 20px;
+  background-color: var(--color-blush);
+  border-radius: 10px;
+  position: relative;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--color-cerice);
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+  background-color: var(--color-blush);
+}
+input :checked + .slider ::before {
+  transform: translate3d(20px);
+}
