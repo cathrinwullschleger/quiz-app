@@ -1,5 +1,4 @@
 .header {
-  padding-right: 60px;
   top: 0;
   background-color: var(--color-cerice);
   color: var(--color-charleston);
@@ -11,6 +10,6 @@
   justify-content: center;
   width: 100%;
   position: fixed;
-  font-size: x-large;
+
   z-index: 1;
 }

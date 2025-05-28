@@ -1,5 +1,5 @@
 :root {
-  --color-cerice: #e4dfdd;
+  --color-cerice: #f0eceb;
   --color-citron: #849428;
   --color-charleston: #1e3309;
   --color-blush: #99a8ae;
@@ -15,5 +15,11 @@ body {
   margin: 0;
 }
 main {
-  padding-bottom: 80px;
+  padding-bottom: 90px;
+  padding-top: 20px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
