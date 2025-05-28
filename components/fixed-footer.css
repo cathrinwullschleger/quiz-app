@@ -16,7 +16,3 @@
   padding: 8px;
   border-radius: 6px;
 }
-
-.footer-link.active img {
-  background-color: var(--color-blush);
-}

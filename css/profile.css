@@ -13,8 +13,9 @@
 }
 @media (max-width: 800px) {
   .profile {
-    max-width: 100%;
-    margin: 10px 5px;
+    justify-content: center;
+    max-width: 60%;
+    margin: 10px 5autopx;
   }
 }
 .settings {
@@ -27,8 +28,14 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+}
+@media (max-width: 800px) {
+  .settings {
+    justify-content: center;
+    max-width: 60%;
+    margin: 10px 5autopx;
+  }
 }
 .profile-image {
   width: 100px;
@@ -43,7 +50,6 @@
   margin-bottom: 16px;
 }
 .bookmark-icon-counter {
-  background-color: var(--color-blush);
   padding: 8px;
   border-radius: 10px;
   right: 10px;
@@ -51,7 +57,6 @@
 .counter {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 .switch {
   display: flex;
