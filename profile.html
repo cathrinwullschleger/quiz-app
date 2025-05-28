@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1><span class="quiz-icon">🧠</span> Quiz App</h1>
+    </header>
+    <main id="profile" class="main active">
+      <section class="profile">
+        <div class="profile-header">
+          <img
+            src="./assets/profile-picture.jpg"
+            alt="Profile picture of Cathrin"
+            class="profile-image"
+          />
+          <h2 class="name">Cathrin Wullschleger</h2>
+        </div>
+
+        <h3>About me</h3>
+        <p>
+          I love spending time outdoors and enjoy hiking through nature—it helps
+          me recharge and stay inspired. Currently, I'm learning web development
+          and really enjoying the journey. I'm especially fascinated by CSS
+          Flexbox and how it makes designing responsive layouts both powerful
+          and intuitive.
+        </p>
+        <div class="counter">
+          <img
+            src="./assets/bookmark.svg"
+            alt="Bookmark Icon"
+            class="bookmark-icon-counter"
+          />
+          <span class="count">6</span>
+        </div>
+      </section>
+
+      <section class="settings">
+        <h3>Settings</h3>
+        <label class="switch">
+          <input type="checkbox" id="darkmode" name="darkmode" />
+          <span class="slider"></span>
+          <span class="label-text">Dark Mode</span>
+        </label>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="index.html#home" class="footer-link">
+        <img class="footer-home-icon" src="./assets/home.svg" alt="home" />
+      </a>
+
+      <a href="bookmarks.html#bookmark" class="footer-link">
+        <img
+          class="footer-bookmark-icon"
+          src="./assets/bookmark.svg"
+          alt="bookmark"
+        />
+      </a>
+
+      <a href="profile.html#profile" class="footer-link active">
+        <img
+          class="footer-profile-icon"
+          src="./assets/profile.svg"
+          alt="profile"
+        />
+      </a>
+    </footer>
+  </body>
+</html>

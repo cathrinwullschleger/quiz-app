@@ -4,6 +4,7 @@
 @import "./global.css";
 @import "../components/button.css";
 @import "./bookmark.css";
+@import "./profile.css";
 
 main {
   margin-top: 100px;
