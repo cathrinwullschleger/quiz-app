@@ -1,6 +1,6 @@
 .solution {
   background-color: var(--color-blush);
-  border: 3px solid var(--color-blush);
+  border: 2px solid var(--color-blush);
   border-radius: 5px;
   padding: 5px;
   gap: 2px;

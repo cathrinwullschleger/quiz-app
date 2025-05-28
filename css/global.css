@@ -13,3 +13,6 @@ body {
   background-attachment: fixed;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+main {
+  padding-bottom: 80px;
+}
