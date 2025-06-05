@@ -18,12 +18,21 @@
       <textarea
         name="question"
         id="question"
-        maxlength="80"
+        maxlength="150"
+        data-js="text-input"
         required
       ></textarea>
+      <p data-js="char-count">150 characters left</p>
 
       <label for="Your answer">Your answer:</label>
-      <textarea name="answer" id="answer" maxlength="150" required></textarea>
+      <textarea
+        name="answer"
+        id="answer"
+        maxlength="150"
+        data-js="text-input"
+        required
+      ></textarea>
+      <p data-js="char-count">150 characters left</p>
 
       <label for="tag">Tag:</label>
       <input type="text" id="tag" name="tag" required />

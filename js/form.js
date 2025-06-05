@@ -26,3 +26,10 @@ form.addEventListener("submit", (event) => {
 
   cardContainer.append(newCard); // jetzt wird Section in den sichtbaren Bereich der Website eingefügt (an der Stelle, an der section im HTML eingefügt ist)
 });
+
+/* const input = document.querySelector('[data-js="text-input"]');
+    *const charactersLeftElement = document.querySelector('[data-js="char-count"]');
+    *input.addEventListener("input", (event) => {
+    *charactersLeftElement.textContent = 150 - event.target.value.length;
+    });
+*/
