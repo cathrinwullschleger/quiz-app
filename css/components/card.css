@@ -69,3 +69,6 @@ h2 {
   gap: 5px;
   flex-wrap: wrap;
 }
+.hidden {
+  display: none;
+}

@@ -15,3 +15,13 @@ bookmarkButton.addEventListener("click", () => {
     bookmarkButton.setAttribute("aria-label", "add bookmark");
   }
 });
+
+const showAnswerButton = document.querySelector('[data-js="solution"]');
+
+showAnswerButton.addEventListener("click", () => {
+  const card = showAnswerButton.closest(".card");
+  const answer = card.querySelector(".answer");
+  const isHidden = answer.classList.toggle("hidden");
+
+  showAnswerButton.textContent = isHidden ? "Show Answer" : "Hide Answer";
+});
