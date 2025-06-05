@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/form.js" defer></script>
   </head>
   <body>
     <header class="header">
       <h1>Quiz App</h1>
     </header>
     <main id="form" class="main active"></main>
+    <form class="new-question-card" data-js="form">
+      <h2>Create your own question</h2>
+      <label for="question">Your question:</label>
+      <textarea
+        name="question"
+        id="question"
+        maxlength="80"
+        required
+      ></textarea>
+
+      <label for="Your answer">Your answer:</label>
+      <textarea name="answer" id="answer" maxlength="150" required></textarea>
+
+      <label for="tag">Tag:</label>
+      <input type="text" id="tag" name="tag" required />
+
+      <button type="submit" class="solution">Submit</button>
+    </form>
+    <section class="card-container" data-js="card-container"></section>
+
     <footer class="footer">
       <a href="index.html#home" class="footer-link">
         <img class="footer-home-icon" src="./assets/home.svg" alt="home" />
