@@ -11,36 +11,40 @@
     <header class="header">
       <h1>Quiz App</h1>
     </header>
-    <main id="form" class="main active"></main>
-    <form class="new-question-card" data-js="form">
-      <h2>Create your own question</h2>
-      <label for="question">Your question:</label>
-      <textarea
-        name="question"
-        id="question"
-        maxlength="150"
-        data-js="text-input"
-        required
-      ></textarea>
-      <p data-js="char-count">150 characters left</p>
+    <main id="form" class="main active">
+      <form class="new-question-card" data-js="form">
+        <h2>Create your own question</h2>
+        <label for="question">Your question:</label>
+        <div class="input-wrapper">
+          <textarea
+            class="input-textarea"
+            name="question"
+            id="question"
+            maxlength="50"
+            data-js="text-input"
+            required
+          ></textarea>
+          <p class="char-counter" data-js="char-count">50 characters left</p>
+        </div>
+        <label for="Your answer">Your answer:</label>
+        <div class="input-wrapper">
+          <textarea
+            class="input-textarea"
+            name="answer"
+            id="answer"
+            maxlength="150"
+            data-js="text-input"
+            required
+          ></textarea>
+          <p class="char-counter" data-js="char-count">150 characters left</p>
+        </div>
+        <label for="tag">Tag:</label>
+        <input class="input-tag" type="text" id="tag" name="tag" required />
 
-      <label for="Your answer">Your answer:</label>
-      <textarea
-        name="answer"
-        id="answer"
-        maxlength="150"
-        data-js="text-input"
-        required
-      ></textarea>
-      <p data-js="char-count">150 characters left</p>
-
-      <label for="tag">Tag:</label>
-      <input type="text" id="tag" name="tag" required />
-
-      <button type="submit" class="solution">Submit</button>
-    </form>
-    <section class="card-container" data-js="card-container"></section>
-
+        <button type="submit" class="solution">Submit</button>
+      </form>
+      <section class="card-container" data-js="card-container"></section>
+    </main>
     <footer class="footer">
       <a href="index.html#home" class="footer-link">
         <img class="footer-home-icon" src="./assets/home.svg" alt="home" />
