@@ -1,6 +1,6 @@
 const bookmarkButton = document.querySelector('[data-js="bookmark"]');
 
-// Variable erstellen, Wwhlt das erste Element im Dokument aus, das das Attribut data-js="bookmark" hat
+// Variable `bookmarkButton` erstellen, Wwhlt das erste Element im Dokument aus, das das Attribut data-js="bookmark" hat
 
 bookmarkButton.addEventListener("click", () => {
   // Fügt dem gefundenen Bookmark-Button einen "Klick"-Eventlistener hinzu.
