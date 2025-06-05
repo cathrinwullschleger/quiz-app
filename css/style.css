@@ -1,8 +1,8 @@
-@import "../components/card.css";
-@import "../components/fixed-footer.css";
-@import "../components/header.css";
+@import "./components/card.css";
+@import "./components/fixed-footer.css";
+@import "./components/header.css";
 @import "./global.css";
-@import "../components/button.css";
+@import "./components/button.css";
 @import "./bookmark.css";
 @import "./profile.css";
 

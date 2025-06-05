@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/index.js" defer></script>
   </head>
 
   <body>
@@ -15,11 +16,18 @@
     <main id="home" class="main active">
       <ul class="question-card">
         <li class="card">
-          <img
-            class="bookmark-icon"
-            src="./assets/bookmark.svg"
-            alt="bookmark"
-          />
+          <button
+            class="bookmark-button"
+            aria-label="add bookmark"
+            data-js="bookmark"
+            type="button"
+          >
+            <img
+              class="bookmark-icon"
+              src="./assets/bookmark.svg"
+              alt="unmarked bookmark"
+            />
+          </button>
           <h2>First Question</h2>
           <section class="tags">
             <div class="tag">flexbox</div>
@@ -29,15 +37,18 @@
             Which property allows the position of elements along the main axis
             to be changed?
           </p>
-          <div class="answer" hidden>justify-content</div>
-          <button class="solution">Show Answer</button>
+          <div class="answer hidden">
+            <strong>Solution: </strong>justify-content
+          </div>
+          <button class="solution" data-js="solution">Show Answer</button>
         </li>
         <li class="card">
           <img
             class="bookmark-icon"
             src="./assets/bookmark.svg"
-            alt="bookmark"
+            alt="unmarked bookmark"
           />
+
           <h2>Second Question</h2>
           <section class="tags">
             <div class="tag">flexbox</div>
@@ -51,11 +62,13 @@
           <button class="solution">Show Answer</button>
         </li>
         <li class="card">
+          >
           <img
             class="bookmark-icon"
             src="./assets/bookmark.svg"
-            alt="bookmark"
+            alt="unmarked bookmark"
           />
+
           <h2>Third Question</h2>
           <section class="tags">
             <div class="tag">css</div>
@@ -68,8 +81,9 @@
           <img
             class="bookmark-icon"
             src="./assets/bookmark.svg"
-            alt="bookmark"
+            alt="unmarked bookmark"
           />
+
           <h2>Fourth Question</h2>
           <section class="tags">
             <div class="tag">html</div>
