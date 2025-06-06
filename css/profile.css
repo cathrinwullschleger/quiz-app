@@ -11,6 +11,9 @@
   justify-content: center;
   margin-bottom: 20px;
 }
+.profile h3 {
+  margin-bottom: 0.2px;
+}
 @media (max-width: 800px) {
   .profile {
     justify-content: center;
@@ -48,6 +51,12 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
+}
+.name {
+  font-size: 1.17em;
+}
+.small-heading {
+  font-size: 1em;
 }
 .icon-counter {
   padding: 8px;
@@ -102,6 +111,6 @@
 input:checked + .slider {
   background-color: var(--color-blush);
 }
-input :checked + .slider ::before {
-  transform: translate3d(20px);
+input:checked + .slider::before {
+  transform: translateX(20px);
 }
