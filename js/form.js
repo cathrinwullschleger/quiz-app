@@ -28,6 +28,7 @@ form.addEventListener("submit", (event) => {
 });
 
 function setupCharCountAll() {
+  // Behälter der Funktion (Anleitung)
   // Die Funktion setupCharCountAll sorgt dafür, dass bei mehreren Eingabefeldern (question und answer) jeweils die verbleibende Zeichenanzahl angezeigt wird.
 
   const inputs = document.querySelectorAll('[data-js="text-input"]'); // Alle Eingabefelder (z. B. <textarea>) mit dem Attribut data-js="text-input" auswählen.

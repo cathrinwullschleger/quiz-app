@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/profile.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -20,8 +21,7 @@
           />
           <h2 class="name">Cathrin Wullschleger</h2>
         </div>
-
-        <h3>About me</h3>
+        <h3 class="small-heading">About me</h3>
         <p>
           I love spending time outdoors and enjoy hiking through nature—it helps
           me recharge and stay inspired. Currently, I'm learning web development
@@ -53,7 +53,12 @@
       <section class="settings">
         <h3>Settings</h3>
         <label class="switch">
-          <input type="checkbox" id="darkmode" name="darkmode" />
+          <input
+            type="checkbox"
+            id="darkmode"
+            name="darkmode"
+            data-js="darkmode-toggle"
+          />
           <span class="slider"></span>
           <span class="label-text">Dark Mode</span>
         </label>
