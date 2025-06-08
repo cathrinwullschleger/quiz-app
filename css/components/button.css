@@ -1,4 +1,4 @@
-.solution {
+.button-design {
   background-color: var(--color-blush);
   border: 2px solid var(--color-blush);
   border-radius: 5px;
@@ -11,7 +11,7 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.solution:hover {
+.button-design:hover {
   background-color: var(--color-cerice);
   color: var(--color-blush);
 }
