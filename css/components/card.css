@@ -8,7 +8,7 @@
   justify-content: space-around;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .question-card {
     flex-wrap: wrap;
   }

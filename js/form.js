@@ -1,52 +1,89 @@
-const form = document.querySelector('[data-js="form"]'); //Variable form erstellen um Zugriff auf <form> aus html zu haben
-const cardContainer = document.querySelector('[data-js="card-container"]'); // Zugriff auf die Section in html, die ermöglicht die neue Karte zu erstellen
+// Zugriff auf das Formular-Element über das data-js Attribut
+const form = document.querySelector('[data-js="form"]');
 
+// Zugriff auf das Container-Element, in dem neue Karten angezeigt werden sollen
+const cardContainer = document.querySelector('[data-js="card-container"]');
+
+// Event Listener auf das Formular: Wenn es abgeschickt wird, folgende Funktion ausführen
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); // nicht vergessen, das verhindert das Neuladen der Seite(würde der Browser selbst machen)
+  event.preventDefault(); // Verhindert das automatische Neuladen der Seite beim Abschicken
 
-  const formData = new FormData(form); // Alle Werte aus dem Formular ziehen (hier würde vielleicht auch event.target gehen)
-  const data = Object.fromEntries(formData); // FormData muss in ein Javascript-Objekt umgewandelt werden
+  // Erstellt ein FormData-Objekt mit den Eingaben des Formulars
+  const formData = new FormData(form);
+  // Wandelt FormData in ein einfaches JavaScript-Objekt um
+  const data = Object.fromEntries(formData);
 
-  const newCard = document.createElement("section"); // Section erstellen (für die neue Quiz-Karte)
-  newCard.classList.add("new-question-card"); // Styling der Karte (angepasst damit es schöner auf der Seite aussieht, aber Stil, wie die von der Startseite)
+  // Erstellt ein neues <li>-Element für die Quizkarte
+  const newCard = document.createElement("li");
+  // Fügt dem <li> die CSS-Klasse "card" hinzu
+  newCard.classList.add("card");
 
-  const newQuestion = document.createElement("p"); // Erstellt ein neues p Element und fügt den Text aus question ein
+  // Erstellt ein neues <p>-Element für die Frage
+  const newQuestion = document.createElement("p");
+  // Fügt den Fragetext aus dem Formular ins <p> ein
   newQuestion.textContent = data.question;
-
-  const newAnswer = document.createElement("p"); // Erstellt ein neues p Element und fügt den Text aus answer ein
+  // Erstellt ein neues <p>-Element für die Antwort
+  const newAnswer = document.createElement("p");
+  // Fügt den Antworttext aus dem Formular ins <p> ein
   newAnswer.textContent = data.answer;
 
-  const newTag = document.createElement("div"); // Erstellt ein div Element, fügt Text aus tag hinzu und gibt Klasse an, für CSS
+  // Erstellt ein neues <div>-Element für den Tag
+  const newTag = document.createElement("div");
+  // Fügt dem <div> die CSS-Klasse "tag" hinzu
   newTag.classList.add("tag");
+  // Fügt den Tag-Text aus dem Formular ins <div> ein
   newTag.textContent = data.tag;
 
-  newCard.append(newQuestion); // die drei Inhalte werden zur Section (also der neuen Karte) hinzugefügt
+  newCard.append(newQuestion); // die drei Inhalte werden zur li (also der neuen Karte) hinzugefügt
   newCard.append(newAnswer);
   newCard.append(newTag);
 
-  cardContainer.append(newCard); // jetzt wird Section in den sichtbaren Bereich der Website eingefügt (an der Stelle, an der section im HTML eingefügt ist)
+  cardContainer.append(newCard); // jetzt wird li in den sichtbaren Bereich der Website eingefügt (an der Stelle, an der ul im HTML eingefügt ist)
+
+  // Setzt das Formular zurück, leert alle Felder
+  form.reset();
+  // Setzt alle Zeichen-Zähler zurück (zählt wieder von max runter)
+  resetCharCounters();
 });
 
+// Funktion zur Zeichenanzahl-Anzeige bei text-input
 function setupCharCountAll() {
-  // Behälter der Funktion (Anleitung)
-  // Die Funktion setupCharCountAll sorgt dafür, dass bei mehreren Eingabefeldern (question und answer) jeweils die verbleibende Zeichenanzahl angezeigt wird.
+  // Wählt alle Textfelder mit dem passenden data-js Attribut aus
+  const inputs = document.querySelectorAll('[data-js="text-input"]');
+  // Wählt alle Zähler-Elemente mit dem passenden data-js Attribut aus
+  const counters = document.querySelectorAll('[data-js="char-count"]');
 
-  const inputs = document.querySelectorAll('[data-js="text-input"]'); // Alle Eingabefelder (z. B. <textarea>) mit dem Attribut data-js="text-input" auswählen.
-  const counters = document.querySelectorAll('[data-js="char-count"]'); //  Alle Zähler-Elemente (z. B. <p>) mit dem Attribut data-js="char-count" auswählen.
-
+  // // Geht jedes Eingabefeld durch (z. B. Frage, Antwort) und merkt sich den Index (Position in der Liste)
   inputs.forEach((input, index) => {
-    //Durch jedes Eingabefeld gehen (input -> aktuelle textarea -> text-input / inputs, alle textareas mit data-js="text-input") – und parallel den passenden Zähler holen. index stellt sicher, dass das passende Zähler-Element verwendet wird.
-    const counter = counters[index]; //Nimm den Zähler, der zur gleichen Position gehört wie das Eingabefeld. (weil es mherer textareas und counter gibt)
-    input.addEventListener("input", () => {
-      // Wenn in ein Feld etwas eingegeben wird, passiert folgendes:
+    // Holt das passende Zähler-Element für das aktuelle Eingabefeld (z. B. <p data-js="char-count">),
+    // indem der gleiche Index in der Zählerliste (counters) verwendet wird (in einem Array: text-area 0 mit char counter 0)
+    const counter = counters[index];
+
+    // Funktion, die bei jeder Eingabe im Feld die verbleibenden Zeichen berechnet
+    function updateCounter() {
       const maxLength = input.maxLength; // Maximale Zeichenanzahl aus dem HTML (maxlength="150")
-      const currentLength = input.value.length; // Aktuelle Anzahl der eingegebenen Zeichen
-      counter.textContent = `${maxLength - currentLength} characters left`; //Text im Zähler-Element aktualisieren: " X characters left"
-    });
+      const currentLength = input.value.length; // Ermittelt aktuelle Anzahl der eingegebenen Zeichen
+      counter.textContent = `${maxLength - currentLength} characters left`; // Zeigt die verbleibenden Zeichen an + characters left
+    }
+    // Führt die Funktion bei jeder Eingabe aus
+    input.addEventListener("input", updateCounter);
+    updateCounter();
   });
 }
+// Ruft die Funktion auf, damit alle Zeichen-Zähler funktionieren
+setupCharCountAll();
 
-setupCharCountAll(); // Die Funktion aufrufen, damit alles beim Laden der Seite funktioniert.
+// Funktion, die alle Zeichen-Zähler neu berechnet (z. B. nach einem Reset)
+function resetCharCounters() {
+  // Holt alle Eingabefelder
+  const inputs = document.querySelectorAll('[data-js="text-input"]');
+
+  // Geht durch jedes Eingabefeld
+  inputs.forEach((input) => {
+    // Löst ein künstliches "input"-Event aus, um den Zeichen-Zähler zu aktualisieren. mit der dispatchEvent funktion
+    input.dispatchEvent(new Event("input"));
+  });
+}
 
 /* -----------------------------------------------------------------------------------------------
  1. try counting of characters:

@@ -1,6 +1,6 @@
 .new-question-card {
   background-color: var(--color-cerice);
-  max-width: 50%;
+  max-width: 80%;
   margin: 0px auto;
   border: 2px solid var(--color-blush);
   box-shadow: 0 2px 6px var(--color-blush);
@@ -9,7 +9,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 800px) {
+  .new-question-card {
+    justify-content: center;
+    max-width: 50%;
+    margin: 10px auto;
+  }
 }
 .new-question-card h2 {
   display: flex;
@@ -22,6 +30,8 @@
 }
 .input-wrapper {
   position: relative;
+  margin-bottom: 15px;
+  gap: 15px;
 }
 .input-textarea {
   width: 100%;
@@ -33,6 +43,7 @@
   border: 2px solid var(--color-blush);
   box-shadow: 0 2px 6px var(--color-blush);
   border-radius: 6px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .input-tag {
@@ -44,6 +55,7 @@
   border: 2px solid var(--color-blush);
   box-shadow: 0 2px 6px var(--color-blush);
   border-radius: 6px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .char-counter {
