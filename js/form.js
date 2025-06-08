@@ -18,6 +18,10 @@ form.addEventListener("submit", (event) => {
   // Fügt dem <li> die CSS-Klasse "card" hinzu
   newCard.classList.add("card");
 
+  // h2 erstellen
+  const newHeading = document.createElement("h2");
+  newHeading.textContent = "Your Question";
+
   // Erstellt ein neues <p>-Element für die Frage
   const newQuestion = document.createElement("p");
   // Fügt den Fragetext aus dem Formular ins <p> ein
@@ -25,8 +29,11 @@ form.addEventListener("submit", (event) => {
   // Erstellt ein neues <p>-Element für die Antwort
   const newAnswer = document.createElement("p");
   // Fügt den Antworttext aus dem Formular ins <p> ein
-  newAnswer.textContent = data.answer;
+  newAnswer.textContent = `Solution: ${data.answer}`;
 
+  // Tag-Section, damit ich das Css anwensen kann
+  const tagSection = document.createElement("section");
+  tagSection.classList.add("tags");
   // Erstellt ein neues <div>-Element für den Tag
   const newTag = document.createElement("div");
   // Fügt dem <div> die CSS-Klasse "tag" hinzu
@@ -34,10 +41,57 @@ form.addEventListener("submit", (event) => {
   // Fügt den Tag-Text aus dem Formular ins <div> ein
   newTag.textContent = data.tag;
 
+  tagSection.append(newTag);
+
+  //Show Answer/Hidde Answer
+  const showAnswerButton = document.createElement("button");
+  showAnswerButton.classList.add("button-design");
+  showAnswerButton.textContent = "Show Answer";
+
+  newAnswer.classList.add("answer", "hidden");
+
+  showAnswerButton.addEventListener("click", () => {
+    const isHidden = newAnswer.classList.toggle("hidden");
+    showAnswerButton.textContent = isHidden ? "Show Answer" : "Hide Answer";
+  });
+
+  //Bookmark erstellen (Button)
+  const newBookmark = document.createElement("button");
+  newBookmark.classList.add("bookmark-button");
+  newBookmark.setAttribute("data-js", "bookmark");
+  newBookmark.setAttribute("type", "button");
+  newBookmark.setAttribute("aria-label", "add bookmark");
+  //Bookmarkicon erstellen
+  const bookmarkIcon = document.createElement("img");
+  bookmarkIcon.classList.add("bookmark-button");
+  bookmarkIcon.setAttribute("src", "./assets/bookmark.svg");
+  bookmarkIcon.setAttribute("alt", "unmarked bookmark");
+
+  newBookmark.append(bookmarkIcon);
+
+  //toggle funktion definieren
+  const toggleBookmark = () => {
+    const isBookmarked = newBookmark.classList.toggle("is-bookmarked");
+
+    bookmarkIcon.src = isBookmarked
+      ? "./assets/bookmark-marked.svg"
+      : "./assets/bookmark.svg";
+
+    bookmarkIcon.alt = isBookmarked ? "marked bookmark" : "unmarked bookmark";
+    newBookmark.setAttribute(
+      "aria-label",
+      isBookmarked ? "remove bookmark" : "add bookmark"
+    );
+  };
+  newBookmark.addEventListener("click", toggleBookmark);
+
+  newCard.append(newHeading);
+  newCard.append(tagSection);
   newCard.append(newQuestion); // die drei Inhalte werden zur li (also der neuen Karte) hinzugefügt
   newCard.append(newAnswer);
-  newCard.append(newTag);
 
+  newCard.append(newBookmark);
+  newCard.append(showAnswerButton);
   cardContainer.append(newCard); // jetzt wird li in den sichtbaren Bereich der Website eingefügt (an der Stelle, an der ul im HTML eingefügt ist)
 
   // Setzt das Formular zurück, leert alle Felder

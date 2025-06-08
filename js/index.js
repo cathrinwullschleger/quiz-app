@@ -1,35 +1,63 @@
+// Wählt das erste Element auf der Seite aus, das das Attribut data-js="bookmark" hat
 const bookmarkButton = document.querySelector('[data-js="bookmark"]');
+// Sucht innerhalb des ausgewählten Buttons das <img>-Element (also das Icon-Bild)
+const bookmarkIcon = bookmarkButton.querySelector("img");
 
-// Variable `bookmarkButton` erstellen, Wählt das erste Element im Dokument aus, das das Attribut data-js="bookmark" hat
+// Definiert eine Funktion, die beim Klick auf das Bookmark ausgeführt wird
+const toggleBookmark = () => {
+  // Toggle-Funktion: Fügt die Klasse "is-bookmarked" hinzu, wenn sie fehlt – entfernt sie, wenn sie da ist
+  // Ist true, wenn der Button gerade als "is-bookmarked" gekennzeichnet ist
+  const isBookmarked = bookmarkButton.classList.toggle("is-bookmarked");
 
-bookmarkButton.addEventListener("click", () => {
-  // Fügt dem gefundenen Bookmark-Button einen "Klick"-Eventlistener hinzu.
-  // Sobald der Button geklickt wird, wird die unten stehende Funktion ausgeführt.
+  // Ändert das Bild des Icons je nach Bookmark-Status
+  bookmarkIcon.src = isBookmarked
+    ? "./assets/bookmark-marked.svg" //wenn aktiv: zeige"bookmark-marked"
+    : "./assets/bookmark.svg"; //wenn aktiv: zeige"bookmark"
 
-  const icon = bookmarkButton.querySelector("img");
+  // Ändert den Alternativtext (für Screenreader) je nach Status
+  bookmarkIcon.alt = isBookmarked ? "marked bookmark" : "unmarked bookmark";
 
-  // Sucht innerhalb des Buttons das <img>-Element (Bookmark-icon)
+  // Setzt das ARIA-Label neu – wichtig für Barrierefreiheit
+  bookmarkButton.setAttribute(
+    "aria-label",
+    isBookmarked ? "remove bookmark" : "add bookmark"
+  );
+};
+bookmarkButton.addEventListener("click", toggleBookmark);
 
-  const isNowBookmarked = bookmarkButton.classList.toggle("is-bookmarked");
+// Variante 1:
+// const bookmarkButton = document.querySelector('[data-js="bookmark"]');
 
-  /*
-   * Schaltet die Klasse "is-bookmarked" auf dem Button um:
-   * Gibt true zurück, wenn die Klasse nach dem Umschalten vorhanden ist (also "gemerkt"),
-   * andernfalls false (nicht gemerkt).
-   */
+// // Variable `bookmarkButton` erstellen, Wählt das erste Element im Dokument aus, das das Attribut data-js="bookmark" hat
 
-  if (isNowBookmarked) {
-    icon.alt = "marked bookmark";
-    icon.src = "./assets/bookmark-marked.svg";
-    bookmarkButton.setAttribute("aria-label", "remove bookmark");
-  } else {
-    icon.alt = "unmarked bookmark";
-    icon.src = "./assets/bookmark.svg";
-    bookmarkButton.setAttribute("aria-label", "add bookmark");
-  }
-});
+// bookmarkButton.addEventListener("click", () => {
+//   // Fügt dem gefundenen Bookmark-Button einen "Klick"-Eventlistener hinzu.
+//   // Sobald der Button geklickt wird, wird die unten stehende Funktion ausgeführt.
 
-const showAnswerButton = document.querySelector('[data-js="solution"]');
+//   const icon = bookmarkButton.querySelector("img");
+
+//   // Sucht innerhalb des Buttons das <img>-Element (Bookmark-icon)
+
+//   const isNowBookmarked = bookmarkButton.classList.toggle("is-bookmarked");
+
+//   /*
+//    * Schaltet die Klasse "is-bookmarked" auf dem Button um:
+//    * Gibt true zurück, wenn die Klasse nach dem Umschalten vorhanden ist (also "gemerkt"),
+//    * andernfalls false (nicht gemerkt).
+//    */
+
+//   if (isNowBookmarked) {
+//     icon.alt = "marked bookmark";
+//     icon.src = "./assets/bookmark-marked.svg";
+//     bookmarkButton.setAttribute("aria-label", "remove bookmark");
+//   } else {
+//     icon.alt = "unmarked bookmark";
+//     icon.src = "./assets/bookmark.svg";
+//     bookmarkButton.setAttribute("aria-label", "add bookmark");
+//   }
+// });
+
+// const showAnswerButton = document.querySelector('[data-js="solution"]');
 
 //  Variable `showAnswerButton`erstellen, die auf das erste <button>-Element mit dem Attribut data-js="solution" im HTML-Dokument zugreift.
 
